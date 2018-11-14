@@ -10,3 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 I'm Allison and I'm adding some text here to see if my collaborators can get this file. 
+
+It's Allison again, and I'm updating some text.
+Blah blah blah
