@@ -15,3 +15,23 @@ It's Allison again, and I'm updating some text.
 Blah blah blah
 
 I'm the collaborator adding something...
+
+Creator (Allison): 
+
+Getting gc_df.csv data, loading the tidyverse, and getting some summary counts
+
+```{r}
+
+library(tidyverse)
+gc_df <- read_csv("gc_df.csv")
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) %>% 
+  spread(make_get_guns, n) %>% 
+  select(-gender)
+
+rownames(get_guns) <- c("Female","Male")
+
+```
+
